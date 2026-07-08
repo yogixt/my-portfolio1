@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="thelearner.yogi terminal icon">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="#0d0d0d"/>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#00ff41" stroke-width="14" stroke-opacity="0.35"/>
+  <g filter="url(#glow)" stroke="#00ff41" fill="#00ff41">
+    <polyline points="150,168 264,256 150,344" fill="none" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="286" y="322" width="120" height="38" rx="14" stroke="none"/>
+  </g>
+</svg>
