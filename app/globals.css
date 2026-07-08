@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --neon-green: #00ff41;
+  --matrix-black: #0d0d0d;
+  --matrix-dark: #1a1a1a;
+  --matrix-gray: #2d2d2d;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0d0d;
+  min-height: 100vh;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Matrix background effect */
+.matrix-bg {
+  background:
+    radial-gradient(ellipse at top, #1a1a1a 0%, #0d0d0d 50%),
+    linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
+}
+
+/* Scan line effect */
+.scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 65, 0.03) 0px,
+    rgba(0, 255, 65, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff41, #00cc33);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00ff41, #00ff65);
+}
+
+/* Glowing text */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* Hacker card */
+.hacker-card {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(13, 13, 13, 0.95) 100%);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.hacker-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+/* Tech badge */
+.tech-badge {
+  @apply px-2 py-1 text-xs rounded;
+  background: rgba(0, 255, 65, 0.1);
+  color: #00ff41;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: rgba(0, 255, 65, 0.5);
+}
+
+/* Matrix button */
+.btn-matrix {
+  @apply px-6 py-3 font-medium rounded transition-all;
+  background: transparent;
+  color: #00ff41;
+  border: 1px solid #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.btn-matrix:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.btn-matrix-filled {
+  @apply px-6 py-3 font-medium rounded transition-all;
+  background: #00ff41;
+  color: #0d0d0d;
+  border: 1px solid #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.btn-matrix-filled:hover {
+  background: #00cc33;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+/* Timeline dot */
+.timeline-dot {
+  @apply w-4 h-4 rounded-full;
+  background: #00ff41;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* Input styling */
+input, textarea {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00ff41 !important;
+  box-shadow: 0 0 0 2px rgba(0, 255, 65, 0.2);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 255, 65, 0.3);
+  color: #ffffff;
+}
+
+/* Animated underline */
+.animated-underline {
+  position: relative;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00ff41;
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Section divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.section-divider::before {
+  content: '//';
+  font-size: 1rem;
+  color: rgba(0, 255, 65, 0.3);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Typing cursor */
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
