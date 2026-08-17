@@ -2,7 +2,7 @@
 
 Personal developer portfolio with a terminal-style hero section and a Gemini-powered chatbot that answers questions about my work.
 
-**Live:** [my-portfolio1.vercel.app](https://my-portfolio1.vercel.app)
+**Live:** [thelearner.yogi](https://thelearner-yogi.vercel.app)
 
 ![Portfolio homepage](docs/screenshot.png)
 
